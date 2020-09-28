@@ -1,2 +1,9 @@
 # Node Modules
 node_modules/
+
+# DS Store
+.DS_Store
+*/DS_Store
+
+# SSL
+*/ssl
