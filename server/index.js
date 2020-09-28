@@ -10,6 +10,8 @@ const directoryToServe = 'client';
 const port = 4000;
 
 app.use('/', express.static(path.join(__dirname, '..', directoryToServe)));
+app.use('/session', express.static(path.join(__dirname, '..', directoryToServe, 'session.html')));
+app.use('/reciever', express.static(path.join(__dirname, '..', directoryToServe, 'reciever.html')));
 
 const httpsOptions = {
   cert: fs.readFileSync(path.join(__dirname, 'ssl', 'server.crt')),
