@@ -114,3 +114,10 @@ button {
 #text {
   text-align: left;
 }
+
+.red {
+  color: red;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}

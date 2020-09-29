@@ -29,14 +29,19 @@ btn.addEventListener('click', () => {
   document.execCommand('copy');
 })
 
-const encryptMessage = (message) => {
-  return CryptoJS.AES.encrypt(message, SECRET_KEY).toString();
+const encryptMessage = (message, key) => {
+  return CryptoJS.AES.encrypt(message, key).toString();
 }
+
+const createHmac = (message, key) => {
+  return CryptoJS.HmacSHA1(message, key).toString();
+};
 
 message.addEventListener('keypress', () => {
   // BUG: last character appears only a new keypress
-  let encryptedMessage = encryptMessage(message.value);
-  socket.emit('typing', encryptedMessage);
+  let hmac = createHmac(message.value, SECRET_KEY);
+  let encryptedMessage = encryptMessage(message.value, SECRET_KEY);
+  socket.emit('typing', { encryptedMessage, hmac });
 });
 
 },{"./service":1,"crypto-js":11}],3:[function(require,module,exports){
