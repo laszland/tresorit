@@ -24,8 +24,7 @@ const createHmac = (message, key) => {
   return CryptoJS.HmacSHA1(message, key).toString();
 };
 
-message.addEventListener('keypress', () => {
-  // BUG: last character appears only a new keypress
+message.addEventListener('keyup', () => {
   let hmac = createHmac(message.value, SECRET_KEY);
   let encryptedMessage = encryptMessage(message.value, SECRET_KEY);
   socket.emit('typing', { encryptedMessage, hmac });
