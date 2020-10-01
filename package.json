@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "testcafe firefox:headless client/test",
-    "lint": "semistandard"
+    "lint": "semistandard",
+    "start": "node server/index.js"
   },
   "author": "Laszlo Roland Kiss",
   "license": "ISC",
