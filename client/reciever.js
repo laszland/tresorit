@@ -6,7 +6,7 @@ const text = document.getElementById('text-container');
 const warning = document.getElementById('warning');
 const SECRET_KEY = window.location.hash.substr(1);
 
-if (SECRET_KEY === "" || SECRET_KEY === undefined) {
+if (SECRET_KEY === '' || SECRET_KEY === undefined) {
   warning.innerHTML = '<p class="warning"> You have no access to any chanel. </p>';
   socket.close();
 }

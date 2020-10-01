@@ -20,6 +20,7 @@
   "semistandard": {
     "globals": [
       "io"
-    ]
+    ],
+    "ignore": [ "client/**/*.bundled.js" ]
   }
 }
