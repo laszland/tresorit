@@ -11,13 +11,13 @@
   <div>
     <form action="#">
       <label for="url">Url</label>
-      <input type="text" name="url" id="url">
+      <input type="text" name="url" id="url" data-test="linkToShare">
       <button class="small-button" id="btn-copy" >Copy Link</button>
     </form>
   </div>
   <form action="#">
     <label for="message">Message</label>
-    <textarea type="text" name="message" id="message" placeholder="Type your message..." oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+    <textarea type="text" name="message" id="message" placeholder="Type your message..."  data-test="inputField" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
   </form>
   <a href="/">Close Chanel</a>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>

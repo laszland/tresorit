@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "testcafe firefox:headless client/test",
     "lint": "semistandard"
   },
   "author": "Laszlo Roland Kiss",
@@ -15,12 +15,17 @@
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
-    "semistandard": "^14.2.3"
+    "semistandard": "^14.2.3",
+    "testcafe": "^1.9.3"
   },
   "semistandard": {
     "globals": [
-      "io"
+      "io",
+      "test",
+      "fixture"
     ],
-    "ignore": [ "client/**/*.bundled.js" ]
+    "ignore": [
+      "client/**/*.bundled.js"
+    ]
   }
 }
